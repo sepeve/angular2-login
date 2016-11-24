@@ -1,0 +1,13 @@
+﻿/*
+    Reglas sobre los input
+*/
+
+.input-error {
+    border: 1px solid get-input-color('error-border');
+    background: get-input-color('error-background');
+    color: get-input-color('error-text');
+    padding: 1em;
+    outline: 0;
+    margin: 1em;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px get-input-color('error-border');
+}

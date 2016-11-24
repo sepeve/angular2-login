@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--<script>document.write('<base href="' + document.location + '" />');</script>-->
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Polyfills for older browsers, we are using TypeScript/ES6 
+         so we need some polyfills for features that are not existent 
+         in some browsers  -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <!-- 2. Configure SystemJS 
+         The systemjs.config.js file contains information
+         about the different modules (libraries) that compose the app. 
+         External modules like Angular 2 and modules internal to our 
+         application that will be defined by us.
+     -->
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+
+  <body>
+    <my-app>Loading ...</my-app>
+  </body>
+
+</html>
+
+                

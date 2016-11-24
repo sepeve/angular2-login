@@ -1,0 +1,26 @@
+﻿/// <reference path="../utils/_variables.scss" />
+// Funciones propias de sass: http://sass-lang.com/documentation/Sass/Script/Functions.html
+
+@function get-app-color($key: 'default') {
+  @return map-get($app-colors, $key);
+}
+
+@function get-button-color($key: 'primary') {
+  @return map-get($button-colors, $key);
+}
+
+@function get-icon-color($key: 'edit') {
+  @return map-get($icon-colors, $key);
+}
+
+@function get-input-color($key: 'default-border') {
+    @return map-get($input-colors, $key);
+}
+
+@function get-nav-color($key: 'primary') {
+    @return map-get($nav-colors, $key);
+}
+
+@function get-footer-color($key: 'text') {
+    @return map-get($footer-colors, $key);
+}

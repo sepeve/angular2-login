@@ -1,0 +1,25 @@
+
+//  Familia y tamaño de la fuente
+body {
+	font-family: Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 16px;
+}
+
+// Tamaño de los headings
+h1      { font-size: 2em; padding: 0.6rem 0; }
+h2      { font-size: 1.5em; padding: 0.4rem 0; }
+h3      { font-size: 1.17em;  }
+h4      { font-size: 1em;     }
+h5      { font-size: 0.83em;  }
+h6      { font-size: 0.75em;  }
+
+// Parágrafos
+p { 
+    line-height: 1.5;
+    margin: 0 0 1rem;    
+}
+
+a {
+    cursor: pointer;
+}

@@ -1,0 +1,16 @@
+﻿// Extilos generales de la aplicaicón, se cargan en el index
+// Utils
+@import 'utils/variables';
+@import 'utils/functions';
+@import 'utils/mixins';
+@import 'utils/component-mixins';
+
+// Base
+@import 'general/typography';
+//@import 'base/base'
+
+// Components
+@import 'components/buttons';
+@import 'components/inputs';
+@import 'components/loader';
+@import 'components/forms';

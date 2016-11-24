@@ -1,0 +1,23 @@
+<ul id='background' class='background'>
+    <li class='fadein' style="background-image: url('app/images/beach.jpeg');"></li> 
+</ul>
+<div class="login">
+    <form #loginForm="ngForm" class="form-horizontal" (ngSubmit)="validate()">
+        <div class="form-group">
+            <label for="user" class="col-sm-2 control-label">User</label>
+            <div class="col-sm-offset-2 col-sm-8">
+                <input type="text" class="form-control col-md-10" [(ngModel)]="login_user.user" name="user" (keyup)="keyup($event, loginForm.valid)" required/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2 control-label">Password</label> 
+            <div class="col-sm-offset-2 col-sm-8">
+                <input type="password" class="form-control" [(ngModel)]="login_user.password" name="password" (keyup)="keyup($event, loginForm.valid)" required/>
+            </div>
+        </div>
+        <button type="submit" class="button-login" [class.button-disabled]="!loginForm.valid" [disabled]="!loginForm.valid">Validate</button>
+        <div class="input-error" *ngIf="errorMessage">
+            {{ errorMessage }}
+        </div>
+    </form>
+</div>

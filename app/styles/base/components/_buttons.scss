@@ -1,0 +1,52 @@
+﻿
+
+/*
+    Reglas sobre botones.
+*/
+
+/*SASS placeholder, no se puede usar en el html, solo se puede usar con @extend*/
+%button {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+    @include respond-to('small'){
+        font-size: 1.3rem;
+    }
+    opacity: 1;
+}
+
+.button-default {
+    @extend %button;
+    @include button-theme(get-button-color('button-text'), get-button-color('default'), get-button-color('background-hover'));
+}
+
+.button-success {
+    @extend %button;
+    @include button-theme(get-button-color('button-text'), get-button-color('success'), get-button-color('background-hover'));
+}
+
+.button-error {
+    @extend %button;
+    @include button-theme(get-button-color('button-text'), get-button-color('error'), get-button-color('background-hover'));
+}
+
+.button-warning {
+    @extend %button;
+    @include button-theme(get-button-color('button-text'), get-button-color('warning'), get-button-color('background-hover'));
+}
+
+.button-login {
+    @extend %button;
+    @include button-theme(get-button-color('button-text'), get-button-color('login'), get-button-color('background-hover'));
+}
+
+.button-disabled {
+    @extend %button;
+    @include button-theme(get-button-color('button-text-disabled'), get-button-color('disabled'), get-button-color('disabled'));
+    border: 1px solid #CECECE;
+}

@@ -1,0 +1,52 @@
+@import 'base/main';
+
+.login {
+    z-index: 10;
+    position:absolute;
+    color:#000;
+    top:50%;
+    left:50%;
+    padding:15px;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    background-color: #FFF;
+    border-radius: 7px;
+    width: 23.5em;
+    opacity: 0.92;
+
+    .button-login {
+        opacity: 1;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .form-group {
+        width: 20em;
+        margin: 1em auto;
+    }
+
+}
+
+#background {
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+#background, #background li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.fadein {
+    animation: fadein .5s ease 0s forwards;
+}

@@ -1,0 +1,33 @@
+﻿/// <reference path="../utils/_variables.scss" />
+/// <reference path="../utils/_functions.scss" />
+/// <reference path="../utils/_mixins.scss" />
+/// <reference path="../utils/_component-mixins.scss" />
+
+
+.loading {
+    position: fixed;
+    z-index: 1001;
+    height: 2em;
+    width: 2em;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    @include respond-to('small') {
+        left: -3rem;
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $loader-color;
+    }
+}

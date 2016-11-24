@@ -1,0 +1,59 @@
+﻿$app-colors:(
+    'default': rgba(13, 13, 13, 1)
+);
+
+$breakpoints: (
+  'small': only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2),
+  'medium': (max-width: 990px),
+  'large': (max-width: 1200px),
+  'huge': (min-width: 1200px),
+);
+
+$button-colors: (
+    'button-text': rgba(255, 255, 255, 1),
+    'success': rgba(57, 192, 78, 1),
+    'default': rgba(242, 242, 242, 1),
+    'error': rgba(216, 79, 79, 1),
+    'warning': rgba(239, 85, 77, 1),
+    'background-hover': rgba(252, 252, 252, 1),
+    'login': rgba(50, 50, 50, 1),
+    'disabled': rgba(255, 255, 255, 1),
+    'button-text-disabled': rgba(216, 216, 216, 1),
+);
+
+$icon-colors: (
+    'edit': rgba(13, 13, 13, 1),
+    'pass': rgba(13, 13, 13, 1),
+    'delete': rgba(13, 13, 13, 1),
+    'activate': rgba(13, 13, 13, 1),
+);
+
+$nav-colors: (
+    'primary': rgba(13, 13, 13, 1),
+    'secondary': rgba(255, 0, 0,.9),
+    'hover': rgba(8, 8, 8, 1),
+    'divider': rgba(0, 0, 0, 1),
+);
+
+$footer-colors: (
+    'background': rgba(13, 13, 13, 1),
+    'text': rgba(255,0,0,.9),
+);
+
+$input-colors: (
+    'background': rgba(255,0,0,.9),
+    'text': rgba(13, 13, 13, 1),
+    'border': rgba(204, 204, 204, 1),
+    'focus-border': rgba(103, 175, 233, 1),
+    'focus-border-from': rgba(0,0,0,.075),
+    'focus-border-to': rgba(102,175,233,.6),
+    'error-text': rgba(169, 67, 66, 1),
+    'error-background': rgba(242, 222, 222, 1),
+    'error-focus-border-from': rgba(0,0,0,.075),
+    'error-focus-border-to': rgba(249, 241, 240, 1),
+    'default-border': rgba(4, 16, 27, 1),
+    'error-border': rgba(235, 204, 209, 1),
+);
+
+$loader-color: rgba(23, 23, 23, 1);
+$user-list-disabled-color: rgba(20, 16, 16, 1);

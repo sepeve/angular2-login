@@ -1,0 +1,95 @@
+﻿/// <reference path="../utils/_variables.scss" />
+
+/// Responsive manager.
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
+
+    @media #{$query} {
+      @content;
+    }
+  }
+}
+
+// Mixins para breakpoints, ejemplo:
+ /*@include bp-small {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }*/
+@mixin bp-large {
+  @media only screen and (max-width: 60em) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only screen and (max-width: 40em) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media only screen and (max-width: 30em) {
+    @content;
+  }
+}
+
+@mixin clearfix {
+  *zoom: 1;
+
+  &:before, &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after { clear: both; }
+}
+
+@mixin inline-block {
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+}
+
+@mixin hide-text() {
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent;
+}
+
+@mixin hidpi {
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+         only screen and (min-resolution: 144dpi) {
+    @content;
+  }
+}
+
+@mixin border($color, $type: false){
+  @if not $type{
+    border: 1px solid $color;
+  } @else {
+    border-#{$type}: 1px solid $color;
+  }
+}
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin absolute-position ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: absolute;
+}
