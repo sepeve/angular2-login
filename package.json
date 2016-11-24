@@ -1,5 +1,5 @@
 {
-  "name": "angular-quickstart",
+  "name": "angular2-login",
   "version": "1.0.0",
   "scripts": {
     "sass": "node-sass app/styles/ -o app/styles/",
